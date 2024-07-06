@@ -19,8 +19,12 @@ jobs:
           npm i
           npm run build
 
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@v4.2.5
-        with:
-          branch: gh-pages # The branch the action should deploy to.
-          folder: dist # The folder the action should deploy.
+      - name: Deploy to gh-pages branch
+        run: |
+            cd dist  # 进入构建产物的目录
+            git init
+            git config --global user.name "于智勇"
+            git config --global user.email "zhiyong.yu@ytever.com"
+            git add .
+            git commit -m "Deploy build artifacts"
+            git push --force https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git master:gh-pages
