@@ -21,7 +21,7 @@ jobs:
 
       - name: Deploy to gh-pages branch
         run: |
-            cd dist  # 进入构建产物的目录
+            cd dist  # 进入构建产物的目录 https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
             git init
             git config --global user.name "于智勇"
             git config --global user.email "zhiyong.yu@ytever.com"
