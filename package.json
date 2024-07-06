@@ -1,0 +1,32 @@
+{
+    "name": "template-element-ui",
+    "version": "2.14.0",
+    "scripts": {
+        "serve": "vite --host",
+        "build": "vite build",
+        "preview": "vite preview --host"
+    },
+    "homepage": "https://cutting-mat.github.io/template-element-ui/",
+    "dependencies": {
+        "@cutting-mat/axios": "^1.2.0",
+        "crypto-js": "^3.3.0",
+        "element-ui": "^2.15.6",
+        "pinia": "^2.0.17",
+        "tiny-emitter": "^2.1.0",
+        "vue": "^2.7.8",
+        "vue-router": "^3.5.4"
+    },
+    "devDependencies": {
+        "@vitejs/plugin-vue2": "^1.1.2",
+        "@vitejs/plugin-legacy": "^2.0.0",
+        "eslint": "^7.32.0",
+        "eslint-config-standard": "^16.0.3",
+        "eslint-plugin-import": "^2.26.0",
+        "eslint-plugin-node": "^11.1.0",
+        "eslint-plugin-promise": "^5.2.0",
+        "eslint-plugin-vue": "^8.6.0",
+        "mockjs": "^1.1.0",
+        "terser": "^5.14.1",
+        "vite": "^3.0.2"
+    }
+}

@@ -1,0 +1,2173 @@
+[
+  {
+    "index": 0,
+    "name": "公共分类",
+    "desc": "公共分类",
+    "add_time": 1653872648,
+    "up_time": 1653872648,
+    "list": [
+      {
+        "query_path": {
+          "path": "/file/upload",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 2079556,
+        "method": "POST",
+        "catid": 462721,
+        "title": "上传",
+        "path": "/file/upload",
+        "project_id": 154414,
+        "req_params": [],
+        "res_body_type": "json",
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "624169fcf1bf0506f3872b1f",
+            "name": "Content-Type",
+            "value": "multipart/form-data"
+          }
+        ],
+        "req_body_form": [
+          {
+            "required": "1",
+            "_id": "624169fcf1bf0506f3872b20",
+            "name": "file",
+            "type": "file"
+          }
+        ],
+        "desc": "",
+        "markdown": "",
+        "req_body_type": "form",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"data\":{\"type\":\"object\",\"properties\":{\"name\":{\"type\":\"string\",\"mock\":{\"mock\":\"@word\"}},\"url\":{\"type\":\"string\",\"mock\":{\"mock\":\"@image(200x200,@hex,fff,IMAGE.png)\"}},\"id\":{\"type\":\"number\",\"mock\":{\"mock\":\"@id\"}}},\"required\":[\"name\",\"url\",\"id\"]}},\"required\":[\"data\"]}",
+        "uid": 125461,
+        "add_time": 1653872688,
+        "up_time": 1653872688,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/file/text/{path}/{id}",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "var",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 2079560,
+        "method": "POST",
+        "catid": 462721,
+        "title": "保存文本",
+        "path": "/file/text/{path}/{id}",
+        "project_id": 154414,
+        "req_params": [
+          {
+            "_id": "624841e5f1bf0506f38734eb",
+            "name": "path",
+            "example": "2022",
+            "desc": ""
+          },
+          {
+            "_id": "624841e5f1bf0506f38734ea",
+            "name": "id",
+            "example": "3225-353-453",
+            "desc": ""
+          }
+        ],
+        "res_body_type": "json",
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "624841e5f1bf0506f38734ec",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "req_body_type": "json",
+        "res_body": "{\"type\":\"string\",\"mock\":{\"mock\":\"text/@now('yyyy')/@uuid()\"}}",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"field_2\":{\"type\":\"string\",\"description\":\"任意json数据\"}}}",
+        "uid": 125461,
+        "add_time": 1653872689,
+        "up_time": 1653872689,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/user/field",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": false,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 2079549,
+        "method": "GET",
+        "catid": 462721,
+        "title": "校验用户是否存在（忘记密码）",
+        "path": "/user/field",
+        "project_id": 154414,
+        "req_params": [],
+        "res_body_type": "json",
+        "req_query": [
+          {
+            "required": "0",
+            "_id": "625f6223f1bf0506f38739a3",
+            "name": "mobile",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "625f6223f1bf0506f38739a2",
+            "name": "email",
+            "example": "",
+            "desc": ""
+          }
+        ],
+        "req_headers": [],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "res_body": "{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"string\",\"mock\":{\"mock\":\"@id\"}},\"accountNumber\":{\"type\":\"string\",\"mock\":{\"mock\":\"@name\"}}},\"required\":[\"id\",\"accountNumber\"]}",
+        "uid": 125461,
+        "add_time": 1653872687,
+        "up_time": 1653872687,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/file/text/{id}",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "var",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 2079564,
+        "method": "GET",
+        "catid": 462721,
+        "title": "获取文本",
+        "path": "/file/text/{id}",
+        "project_id": 154414,
+        "req_params": [
+          {
+            "_id": "624832b9f1bf0506f38734e1",
+            "name": "id",
+            "example": "2022-1231233",
+            "desc": ""
+          }
+        ],
+        "res_body_type": "json",
+        "req_query": [],
+        "req_headers": [],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "res_body": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"content\":{\"type\":\"string\",\"description\":\"任意字符\",\"mock\":{\"mock\":\"[{\\\\\\\"insert\\\\\\\":\\\\\\\"CuttingMat\\\\\\\"},{\\\\\\\"attributes\\\\\\\":{\\\\\\\"header\\\\\\\":1},\\\\\\\"insert\\\\\\\":\\\\\\\"\\\\\\\\n\\\\\\\"},{\\\\\\\"insert\\\\\\\":\\\\\\\"RichText Test\\\\\\\"},{\\\\\\\"attributes\\\\\\\":{\\\\\\\"header\\\\\\\":2},\\\\\\\"insert\\\\\\\":\\\\\\\"\\\\\\\\n\\\\\\\"},{\\\\\\\"attributes\\\\\\\":{\\\\\\\"color\\\\\\\":\\\\\\\"#66a3e0\\\\\\\"},\\\\\\\"insert\\\\\\\":\\\\\\\"Some Content\\\\\\\"},{\\\\\\\"insert\\\\\\\":\\\\\\\"\\\\\\\\n\\\\\\\"}]\"}}},\"required\":[\"content\"]}",
+        "uid": 125461,
+        "add_time": 1653872690,
+        "up_time": 1653872690,
+        "__v": 0
+      }
+    ]
+  },
+  {
+    "index": 0,
+    "name": "账号通用",
+    "desc": null,
+    "add_time": 1653872685,
+    "up_time": 1653872685,
+    "list": [
+      {
+        "query_path": {
+          "path": "/auth/identity",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 2079571,
+        "method": "GET",
+        "catid": 462729,
+        "title": "个人信息",
+        "path": "/auth/identity",
+        "project_id": 154414,
+        "req_params": [],
+        "res_body_type": "json",
+        "req_query": [],
+        "req_headers": [],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"data\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"string\",\"mock\":{\"mock\":\"@id\"}},\"account\":{\"type\":\"string\",\"mock\":{\"mock\":\"@word\"}},\"name\":{\"type\":\"string\",\"mock\":{\"mock\":\"@cname\"}},\"avatar\":{\"type\":\"string\",\"mock\":{\"mock\":\"@image(200x200,@hex,fff,IMAGE)\"}},\"mobile\":{\"type\":\"number\",\"mock\":{\"mock\":\"13@string(\\\"number\\\", 9)\"}},\"state\":{\"type\":\"boolean\"},\"createTime\":{\"type\":\"number\",\"mock\":{\"mock\":\"@timestamp\"}},\"orgId\":{\"type\":\"number\",\"mock\":{\"mock\":\"@id\"}},\"orgName\":{\"type\":\"string\",\"mock\":{\"mock\":\"@cword(3)组织\"}},\"roleId\":{\"type\":\"number\",\"mock\":{\"mock\":\"@id\"}},\"email\":{\"type\":\"string\",\"mock\":{\"mock\":\"@email\"}}},\"required\":[\"id\",\"account\",\"name\",\"avatar\",\"mobile\",\"state\",\"createTime\",\"orgId\",\"orgName\",\"roleId\",\"email\"]}},\"required\":[\"data\"]}",
+        "uid": 125461,
+        "add_time": 1653872691,
+        "up_time": 1653872691,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/auth/password",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 2079578,
+        "method": "PUT",
+        "catid": 462729,
+        "title": "修改密码(公开访问)",
+        "path": "/auth/password",
+        "project_id": 154414,
+        "req_params": [],
+        "res_body_type": "json",
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "627f6af2f1bf0506f38755d1",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"newPassword\":{\"type\":\"string\"},\"token\":{\"type\":\"string\"}},\"required\":[\"newPassword\",\"token\"]}",
+        "req_body_type": "json",
+        "res_body": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{}}",
+        "uid": 125461,
+        "add_time": 1653872691,
+        "up_time": 1653872691,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/auth/identity/switch",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 2079585,
+        "method": "GET",
+        "catid": 462729,
+        "title": "切换身份",
+        "path": "/auth/identity/switch",
+        "project_id": 154414,
+        "req_params": [],
+        "res_body_type": "json",
+        "req_query": [
+          {
+            "required": "1",
+            "_id": "6281e7ccf1bf0506f38755d2",
+            "name": "id",
+            "desc": ""
+          }
+        ],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "6281e7ccf1bf0506f38755d3",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"id\":{\"type\":\"string\"}},\"required\":[\"id\"]}",
+        "req_body_type": "json",
+        "res_body": "{\"type\":\"string\",\"mock\":{\"mock\":\"@guid\"},\"description\":\"token\"}",
+        "uid": 125461,
+        "add_time": 1653872692,
+        "up_time": 1653872692,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/resource/all",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 2079606,
+        "method": "GET",
+        "catid": 462729,
+        "title": "当前用户权限",
+        "path": "/resource/all",
+        "project_id": 154414,
+        "req_params": [],
+        "res_body_type": "json",
+        "req_query": [],
+        "req_headers": [],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"data\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"number\",\"mock\":{\"mock\":\"@integer(1,40)\"}},\"method\":{\"type\":\"string\",\"mock\":{\"mock\":\"GET\"}},\"name\":{\"type\":\"string\",\"mock\":{\"mock\":\"@cword(3)资源\"}},\"pid\":{\"type\":\"number\",\"mock\":{\"mock\":\"@integer(0,10)\"}},\"remark\":{\"type\":\"string\",\"mock\":{\"mock\":\"@csentence\"}},\"route\":{\"type\":\"string\",\"mock\":{\"mock\":\"@word()\"}},\"type\":{\"type\":\"number\",\"mock\":{\"mock\":\"@integer(0,1)\"},\"description\":\"0路由 1请求\"},\"url\":{\"type\":\"string\",\"mock\":{\"mock\":\"/@word()/@word()\"}}},\"required\":[\"id\",\"method\",\"name\",\"route\",\"type\",\"url\",\"pid\"]},\"uniqueItems\":true,\"minItems\":10,\"maxItems\":20}},\"required\":[\"data\"]}",
+        "uid": 125461,
+        "add_time": 1653872694,
+        "up_time": 1656041218,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/account/admin/register/noAuth",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": false,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 2079592,
+        "method": "POST",
+        "catid": 462729,
+        "title": "注册",
+        "path": "/account/admin/register/noAuth",
+        "project_id": 154414,
+        "req_params": [],
+        "res_body_type": "json",
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "62860515f1bf0506f38755e9",
+            "name": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "req_body_type": "form",
+        "res_body": "{\"type\":\"string\",\"mock\":{\"mock\":\"@word\"}}",
+        "uid": 125461,
+        "add_time": 1653872693,
+        "up_time": 1653872693,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/auth/login",
+          "params": []
+        },
+        "edit_uid": 125461,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 2079599,
+        "method": "POST",
+        "catid": 462729,
+        "title": "登录",
+        "path": "/auth/login",
+        "project_id": 154414,
+        "req_params": [],
+        "res_body_type": "json",
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "62b527fb34634a00158b03c8",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"account\":{\"type\":\"string\"},\"password\":{\"type\":\"string\"},\"captcha\":{\"type\":\"string\"}},\"required\":[\"account\",\"password\"]}",
+        "req_body_type": "json",
+        "res_body": "{\"type\":\"string\",\"mock\":{\"mock\":\"@word(8).@word(8).@word(8)\"},\"description\":\"token\"}",
+        "uid": 125461,
+        "add_time": 1653872694,
+        "up_time": 1656039419,
+        "__v": 0
+      }
+    ]
+  },
+  {
+    "index": 0,
+    "name": "验证码",
+    "desc": null,
+    "add_time": 1653872685,
+    "up_time": 1653872685,
+    "list": [
+      {
+        "query_path": {
+          "path": "/captcha/sms/register",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 2079613,
+        "method": "POST",
+        "catid": 462737,
+        "title": "发手机验证码（注册）",
+        "path": "/captcha/sms/register",
+        "project_id": 154414,
+        "req_params": [],
+        "res_body_type": "json",
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "625fbeacf1bf0506f38739c2",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "res_body": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"id\":{\"type\":\"string\",\"mock\":{\"mock\":\"@id\"},\"description\":\"验证码ID\"}},\"required\":[\"id\"]}",
+        "req_body_type": "json",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"mobile\":{\"type\":\"string\"},\"captcha\":{\"type\":\"string\"}},\"required\":[\"mobile\"]}",
+        "uid": 125461,
+        "add_time": 1653872695,
+        "up_time": 1653872695,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/captcha/sms/login",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 2079635,
+        "method": "POST",
+        "catid": 462737,
+        "title": "发手机验证码（登录）",
+        "path": "/captcha/sms/login",
+        "project_id": 154414,
+        "req_params": [],
+        "res_body_type": "json",
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "625fbe87f1bf0506f38739bf",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "res_body": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"id\":{\"type\":\"string\",\"mock\":{\"mock\":\"@id\"},\"description\":\"验证码ID\"}},\"required\":[\"id\"]}",
+        "req_body_type": "json",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"mobile\":{\"type\":\"string\"},\"captcha\":{\"type\":\"string\"}},\"required\":[\"mobile\"]}",
+        "uid": 125461,
+        "add_time": 1653872698,
+        "up_time": 1653872698,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/captcha/sms",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 2079631,
+        "method": "POST",
+        "catid": 462737,
+        "title": "发手机验证码（通用）",
+        "path": "/captcha/sms",
+        "project_id": 154414,
+        "req_params": [],
+        "res_body_type": "json",
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "625fbe93f1bf0506f38739c0",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "res_body": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"id\":{\"type\":\"string\",\"mock\":{\"mock\":\"@id\"},\"description\":\"验证码ID\"}},\"required\":[\"id\"]}",
+        "req_body_type": "json",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"mobile\":{\"type\":\"string\"},\"captcha\":{\"type\":\"string\"}},\"required\":[\"mobile\"]}",
+        "uid": 125461,
+        "add_time": 1653872697,
+        "up_time": 1653872697,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/captcha/sms/reset-password",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 2079617,
+        "method": "POST",
+        "catid": 462737,
+        "title": "发手机验证码（重置密码）",
+        "path": "/captcha/sms/reset-password",
+        "project_id": 154414,
+        "req_params": [],
+        "res_body_type": "json",
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "625fbec3f1bf0506f38739c4",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "res_body": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"id\":{\"type\":\"string\",\"mock\":{\"mock\":\"@id\"},\"description\":\"验证码ID\"}},\"required\":[\"id\"]}",
+        "req_body_type": "json",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"mobile\":{\"type\":\"string\"},\"captcha\":{\"type\":\"string\"}},\"required\":[\"mobile\"]}",
+        "uid": 125461,
+        "add_time": 1653872695,
+        "up_time": 1653872695,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/emailValidCode",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 2079646,
+        "method": "GET",
+        "catid": 462737,
+        "title": "发邮箱验证码",
+        "path": "/emailValidCode",
+        "project_id": 154414,
+        "req_params": [],
+        "res_body_type": "json",
+        "req_query": [
+          {
+            "required": "1",
+            "_id": "62416a71f1bf0506f3872b25",
+            "name": "email",
+            "desc": "邮箱"
+          }
+        ],
+        "req_headers": [],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "res_body": "{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"string\",\"mock\":{\"mock\":\"@id\"}}},\"required\":[\"id\"]}",
+        "uid": 125461,
+        "add_time": 1653872699,
+        "up_time": 1653872699,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/captcha/image",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": false,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 2079654,
+        "method": "GET",
+        "catid": 462737,
+        "title": "获取图形验证码",
+        "path": "/captcha/image",
+        "project_id": 154414,
+        "req_params": [],
+        "res_body_type": "json",
+        "req_query": [],
+        "req_headers": [],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "res_body": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"id\":{\"type\":\"string\",\"mock\":{\"mock\":\"@id\"}},\"content\":{\"type\":\"string\",\"mock\":{\"mock\":\"@image(200x100,@hex,fff,1234)\"}}},\"required\":[\"id\",\"content\"]}",
+        "uid": 125461,
+        "add_time": 1653872700,
+        "up_time": 1653872700,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/captcha/image/validate",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": false,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 2079658,
+        "method": "GET",
+        "catid": 462737,
+        "title": "验证图形验证码",
+        "path": "/captcha/image/validate",
+        "project_id": 154414,
+        "req_params": [],
+        "res_body_type": "json",
+        "req_query": [
+          {
+            "required": "1",
+            "_id": "6261fc20f1bf0506f38739e1",
+            "name": "id",
+            "desc": ""
+          },
+          {
+            "required": "1",
+            "_id": "6261fc20f1bf0506f38739e0",
+            "name": "userInput",
+            "example": "",
+            "desc": ""
+          }
+        ],
+        "req_headers": [],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "res_body": "{\"type\":\"string\",\"description\":\"token\",\"mock\":{\"mock\":\"@word(8).@word(8).@word(8)\"}}",
+        "uid": 125461,
+        "add_time": 1653872701,
+        "up_time": 1653872701,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/auth/password/validate",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 2079624,
+        "method": "POST",
+        "catid": 462737,
+        "title": "验证密码",
+        "path": "/auth/password/validate",
+        "project_id": 154414,
+        "req_params": [],
+        "res_body_type": "json",
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "6261fc0af1bf0506f38739db",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "req_body_type": "json",
+        "res_body": "{\"type\":\"string\",\"mock\":{\"mock\":\"@word(8).@word(8).@word(8)\"},\"description\":\"token\"}",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"password\":{\"type\":\"string\"}},\"required\":[\"password\"]}",
+        "uid": 125461,
+        "add_time": 1653872696,
+        "up_time": 1653872696,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/captcha/sms/validate",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": false,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 2079642,
+        "method": "GET",
+        "catid": 462737,
+        "title": "验证手机验证码",
+        "path": "/captcha/sms/validate",
+        "project_id": 154414,
+        "req_params": [],
+        "res_body_type": "json",
+        "req_query": [
+          {
+            "required": "1",
+            "_id": "6261fc13f1bf0506f38739dd",
+            "name": "id",
+            "desc": ""
+          },
+          {
+            "required": "1",
+            "_id": "6261fc13f1bf0506f38739dc",
+            "name": "userInput",
+            "example": "",
+            "desc": ""
+          }
+        ],
+        "req_headers": [],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "res_body": "{\"type\":\"string\",\"description\":\"token\",\"mock\":{\"mock\":\"@word(8).@word(8).@word(8)\"}}",
+        "uid": 125461,
+        "add_time": 1653872698,
+        "up_time": 1653872698,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/emailValidCode/valid",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": false,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 2079650,
+        "method": "GET",
+        "catid": 462737,
+        "title": "验证邮箱验证码",
+        "path": "/emailValidCode/valid",
+        "project_id": 154414,
+        "req_params": [],
+        "res_body_type": "json",
+        "req_query": [
+          {
+            "required": "1",
+            "_id": "6261fc1af1bf0506f38739df",
+            "name": "id",
+            "desc": ""
+          },
+          {
+            "required": "1",
+            "_id": "6261fc1af1bf0506f38739de",
+            "name": "userInput",
+            "example": "",
+            "desc": ""
+          }
+        ],
+        "req_headers": [],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "res_body": "{\"type\":\"string\",\"mock\":{\"mock\":\"@word(8).@word(8).@word(8)\"}}",
+        "uid": 125461,
+        "add_time": 1653872700,
+        "up_time": 1653872700,
+        "__v": 0
+      }
+    ]
+  },
+  {
+    "index": 0,
+    "name": "角色管理",
+    "desc": null,
+    "add_time": 1653872685,
+    "up_time": 1653872685,
+    "list": [
+      {
+        "query_path": {
+          "path": "/role/s",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 2079662,
+        "method": "GET",
+        "catid": 462739,
+        "title": "列表",
+        "path": "/role/s",
+        "project_id": 154414,
+        "req_params": [],
+        "res_body_type": "json",
+        "req_query": [],
+        "req_headers": [],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"data\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"number\",\"mock\":{\"mock\":\"@integer(1,5)\"}},\"name\":{\"type\":\"string\",\"mock\":{\"mock\":\"@cword(1,3)角色\"}},\"resources\":{\"type\":\"array\",\"items\":{\"type\":\"number\",\"mock\":{\"mock\":\"@id\"}},\"uniqueItems\":true,\"minItems\":2,\"maxItems\":10},\"remark\":{\"type\":\"string\",\"mock\":{\"mock\":\"@csentence\"}}},\"required\":[\"id\",\"name\",\"resources\"]},\"uniqueItems\":true,\"minItems\":2,\"maxItems\":5}},\"required\":[\"data\"]}",
+        "uid": 125461,
+        "add_time": 1653872702,
+        "up_time": 1653872702,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/role",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 2079666,
+        "method": "POST",
+        "catid": 462739,
+        "title": "创建",
+        "path": "/role",
+        "project_id": 154414,
+        "req_params": [],
+        "res_body_type": "json",
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "6226b096f1bf0506f38727f6",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"name\":{\"type\":\"string\"},\"remark\":{\"type\":\"string\"},\"resources\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}}},\"required\":[\"name\",\"resources\"]}",
+        "req_body_type": "json",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"data\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"number\",\"mock\":{\"mock\":\"@id\"}},\"name\":{\"type\":\"string\",\"mock\":{\"mock\":\"@cword(2)角色\"}},\"remark\":{\"type\":\"string\",\"mock\":{\"mock\":\"@csentence\"}},\"resources\":{\"type\":\"array\",\"items\":{\"type\":\"number\",\"mock\":{\"mock\":\"@id\"}},\"uniqueItems\":true,\"minItems\":2,\"maxItems\":10}},\"required\":[\"id\",\"name\",\"resources\"]}},\"required\":[\"data\"]}",
+        "uid": 125461,
+        "add_time": 1653872702,
+        "up_time": 1653872702,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/role",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 2079670,
+        "method": "DELETE",
+        "catid": 462739,
+        "title": "删除",
+        "path": "/role",
+        "project_id": 154414,
+        "req_params": [],
+        "res_body_type": "json",
+        "req_query": [
+          {
+            "required": "1",
+            "_id": "6226b103f1bf0506f38727f8",
+            "name": "id",
+            "desc": ""
+          }
+        ],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "6226b103f1bf0506f38727f9",
+            "name": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "req_body_type": "form",
+        "res_body": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{}}",
+        "uid": 125461,
+        "add_time": 1653872703,
+        "up_time": 1653872703,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/role",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 2079674,
+        "method": "PUT",
+        "catid": 462739,
+        "title": "编辑",
+        "path": "/role",
+        "project_id": 154414,
+        "req_params": [],
+        "res_body_type": "json",
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "6226b0d8f1bf0506f38727f7",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"name\":{\"type\":\"string\"},\"remark\":{\"type\":\"string\"},\"resources\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"id\":{\"type\":\"string\",\"mock\":{\"mock\":\"@id\"}}},\"required\":[\"name\",\"resources\",\"id\"]}",
+        "req_body_type": "json",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"data\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"number\",\"mock\":{\"mock\":\"@id\"}},\"name\":{\"type\":\"string\",\"mock\":{\"mock\":\"@cword(2)角色\"}},\"remark\":{\"type\":\"string\",\"mock\":{\"mock\":\"@csentence\"}},\"resources\":{\"type\":\"array\",\"items\":{\"type\":\"number\",\"mock\":{\"mock\":\"@id\"}},\"uniqueItems\":true,\"minItems\":2,\"maxItems\":10}},\"required\":[\"id\",\"name\",\"resources\"]}},\"required\":[\"data\"]}",
+        "uid": 125461,
+        "add_time": 1653872704,
+        "up_time": 1653872704,
+        "__v": 0
+      }
+    ]
+  },
+  {
+    "index": 0,
+    "name": "资源管理",
+    "desc": null,
+    "add_time": 1653872685,
+    "up_time": 1653872685,
+    "list": [
+      {
+        "query_path": {
+          "path": "/resource",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 2079681,
+        "method": "POST",
+        "catid": 462747,
+        "title": "创建",
+        "path": "/resource",
+        "project_id": 154414,
+        "req_params": [],
+        "res_body_type": "json",
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "6226b286f1bf0506f38727fb",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"method\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"},\"pid\":{\"type\":\"number\"},\"remark\":{\"type\":\"null\"},\"route\":{\"type\":\"string\"},\"type\":{\"type\":\"number\"},\"url\":{\"type\":\"string\"}},\"required\":[\"type\"]}",
+        "req_body_type": "json",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"data\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"number\",\"mock\":{\"mock\":\"@id\"}},\"method\":{\"type\":\"string\",\"mock\":{\"mock\":\"GET\"}},\"name\":{\"type\":\"string\",\"mock\":{\"mock\":\"@cword(3)资源\"}},\"pid\":{\"type\":\"number\",\"mock\":{\"mock\":\"@id\"}},\"remark\":{\"type\":\"null\",\"mock\":{\"mock\":\"@csentence\"}},\"route\":{\"type\":\"string\",\"mock\":{\"mock\":\"@word()\"}},\"type\":{\"type\":\"number\",\"mock\":{\"mock\":\"@integer(0,1)\"}},\"url\":{\"type\":\"string\",\"mock\":{\"mock\":\"/@word()/@word()\"}}},\"required\":[\"id\",\"method\",\"name\",\"pid\",\"route\",\"type\",\"url\"]}},\"required\":[\"data\"]}",
+        "uid": 125461,
+        "add_time": 1653872704,
+        "up_time": 1653872704,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/resource",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 2079685,
+        "method": "DELETE",
+        "catid": 462747,
+        "title": "删除",
+        "path": "/resource",
+        "project_id": 154414,
+        "req_params": [],
+        "res_body_type": "json",
+        "req_query": [
+          {
+            "required": "1",
+            "_id": "62259b54f1bf0506f3872619",
+            "name": "id",
+            "desc": ""
+          }
+        ],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "62259b54f1bf0506f387261a",
+            "name": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "req_body_type": "form",
+        "res_body": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{}}",
+        "uid": 125461,
+        "add_time": 1653872705,
+        "up_time": 1653872705,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/resource",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 2079689,
+        "method": "PUT",
+        "catid": 462747,
+        "title": "编辑",
+        "path": "/resource",
+        "project_id": 154414,
+        "req_params": [],
+        "res_body_type": "json",
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "6226b29bf1bf0506f38727fd",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"number\"},\"method\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"},\"pid\":{\"type\":\"number\"},\"remark\":{\"type\":\"null\"},\"route\":{\"type\":\"string\"},\"type\":{\"type\":\"number\"},\"url\":{\"type\":\"string\"}},\"required\":[\"id\",\"method\",\"name\",\"pid\",\"remark\",\"route\",\"type\",\"url\"]}",
+        "req_body_type": "json",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"data\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"number\",\"mock\":{\"mock\":\"@id\"}},\"method\":{\"type\":\"string\",\"mock\":{\"mock\":\"GET\"}},\"name\":{\"type\":\"string\",\"mock\":{\"mock\":\"@cword(3)资源\"}},\"pid\":{\"type\":\"number\",\"mock\":{\"mock\":\"@id\"}},\"remark\":{\"type\":\"null\",\"mock\":{\"mock\":\"@csentence\"}},\"route\":{\"type\":\"string\",\"mock\":{\"mock\":\"@word()\"}},\"type\":{\"type\":\"number\",\"mock\":{\"mock\":\"@integer(0,1)\"}},\"url\":{\"type\":\"string\",\"mock\":{\"mock\":\"/@word()/@word()\"}}},\"required\":[\"id\",\"method\",\"name\",\"pid\",\"route\",\"type\",\"url\"]}},\"required\":[\"data\"]}",
+        "uid": 125461,
+        "add_time": 1653872705,
+        "up_time": 1653872705,
+        "__v": 0
+      }
+    ]
+  },
+  {
+    "index": 0,
+    "name": "系统设置",
+    "desc": null,
+    "add_time": 1653872685,
+    "up_time": 1653872685,
+    "list": [
+      {
+        "query_path": {
+          "path": "/dict",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 2079693,
+        "method": "POST",
+        "catid": 462749,
+        "title": "创建字典",
+        "path": "/dict",
+        "project_id": 154414,
+        "req_params": [],
+        "res_body_type": "json",
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "6226b3eef1bf0506f3872807",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"dictName\":{\"type\":\"string\"},\"dictCode\":{\"type\":\"string\"},\"remark\":{\"type\":\"string\"}},\"required\":[\"dictName\",\"dictCode\"]}",
+        "req_body_type": "json",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"data\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"number\",\"mock\":{\"mock\":\"@id\"}},\"dictName\":{\"type\":\"string\",\"mock\":{\"mock\":\"@cword(3,6)\"}},\"dictCode\":{\"type\":\"string\",\"mock\":{\"mock\":\"@word\"}},\"remark\":{\"type\":\"string\",\"mock\":{\"mock\":\"@csentence\"}}},\"required\":[\"id\",\"dictName\",\"dictCode\"]}},\"required\":[\"data\"]}",
+        "uid": 125461,
+        "add_time": 1653872706,
+        "up_time": 1653872706,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/dict/item",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 2079700,
+        "method": "POST",
+        "catid": 462749,
+        "title": "创建字典项",
+        "path": "/dict/item",
+        "project_id": 154414,
+        "req_params": [],
+        "res_body_type": "json",
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "6226b468f1bf0506f387280b",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"dictCode\":{\"type\":\"string\"},\"value\":{\"type\":\"string\"},\"pid\":{\"type\":\"number\"}},\"required\":[\"dictCode\",\"value\"]}",
+        "req_body_type": "json",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"data\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"number\",\"mock\":{\"mock\":\"@id\"}},\"dictCode\":{\"type\":\"string\",\"mock\":{\"mock\":\"@word\"}},\"value\":{\"type\":\"string\",\"mock\":{\"mock\":\"@cword(2,6)\"}},\"pid\":{\"type\":\"number\",\"mock\":{\"mock\":\"@id\"}}},\"required\":[\"id\",\"dictCode\",\"value\"]}},\"required\":[\"data\"]}",
+        "uid": 125461,
+        "add_time": 1653872707,
+        "up_time": 1653872707,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/dict",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 2079707,
+        "method": "DELETE",
+        "catid": 462749,
+        "title": "删除字典",
+        "path": "/dict",
+        "project_id": 154414,
+        "req_params": [],
+        "res_body_type": "json",
+        "req_query": [
+          {
+            "required": "1",
+            "_id": "62259ec2f1bf0506f3872620",
+            "name": "id",
+            "desc": ""
+          }
+        ],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "62259ec2f1bf0506f3872621",
+            "name": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "req_body_type": "form",
+        "res_body": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{}}",
+        "uid": 125461,
+        "add_time": 1653872707,
+        "up_time": 1653872707,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/dict/item",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 2079714,
+        "method": "DELETE",
+        "catid": 462749,
+        "title": "删除字典项",
+        "path": "/dict/item",
+        "project_id": 154414,
+        "req_params": [],
+        "res_body_type": "json",
+        "req_query": [
+          {
+            "required": "1",
+            "_id": "6225a01ff1bf0506f387262a",
+            "name": "id",
+            "desc": ""
+          }
+        ],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "6225a01ff1bf0506f387262b",
+            "name": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "req_body_type": "form",
+        "res_body": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{}}",
+        "uid": 125461,
+        "add_time": 1653872708,
+        "up_time": 1653872708,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/dict/s",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 2079721,
+        "method": "GET",
+        "catid": 462749,
+        "title": "字典列表",
+        "path": "/dict/s",
+        "project_id": 154414,
+        "req_params": [],
+        "res_body_type": "json",
+        "req_query": [
+          {
+            "required": "1",
+            "_id": "6226b3adf1bf0506f3872805",
+            "name": "p",
+            "desc": ""
+          },
+          {
+            "required": "1",
+            "_id": "6226b3adf1bf0506f3872804",
+            "name": "pageSize",
+            "example": "",
+            "desc": ""
+          }
+        ],
+        "req_headers": [],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"data\":{\"type\":\"object\",\"properties\":{\"list\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"number\",\"mock\":{\"mock\":\"@id\"}},\"dictName\":{\"type\":\"string\",\"mock\":{\"mock\":\"@cword(2,6)\"}},\"dictCode\":{\"type\":\"string\",\"mock\":{\"mock\":\"@word\"}},\"remark\":{\"type\":\"string\",\"mock\":{\"mock\":\"@csentence\"}}},\"required\":[\"id\",\"dictName\",\"dictCode\"]},\"uniqueItems\":true,\"minItems\":2,\"maxItems\":8},\"totalPage\":{\"type\":\"number\",\"mock\":{\"mock\":\"1\"}},\"totalCount\":{\"type\":\"number\",\"mock\":{\"mock\":\"8\"}}},\"required\":[\"list\",\"totalPage\",\"totalCount\"]}},\"required\":[\"data\"]}",
+        "uid": 125461,
+        "add_time": 1653872709,
+        "up_time": 1653872709,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/dict/item/s",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 2079728,
+        "method": "GET",
+        "catid": 462749,
+        "title": "字典项目列表",
+        "path": "/dict/item/s",
+        "project_id": 154414,
+        "req_params": [],
+        "res_body_type": "json",
+        "req_query": [
+          {
+            "required": "1",
+            "_id": "62393c23f1bf0506f3872983",
+            "name": "dictCode",
+            "desc": ""
+          }
+        ],
+        "req_headers": [],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"data\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"string\",\"mock\":{\"mock\":\"@integer(1,10)\"}},\"dictCode\":{\"type\":\"string\",\"mock\":{\"mock\":\"@word\"}},\"value\":{\"type\":\"string\",\"mock\":{\"mock\":\"@cword(2,6)\"}},\"pid\":{\"type\":\"string\",\"mock\":{\"mock\":\"@integer(1,10)\"}}},\"required\":[\"id\",\"dictCode\",\"value\",\"pid\"]},\"uniqueItems\":true,\"minItems\":2,\"maxItems\":8}},\"required\":[\"data\"]}",
+        "uid": 125461,
+        "add_time": 1653872709,
+        "up_time": 1653872709,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/dict",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 2079735,
+        "method": "PUT",
+        "catid": 462749,
+        "title": "编辑字典",
+        "path": "/dict",
+        "project_id": 154414,
+        "req_params": [],
+        "res_body_type": "json",
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "6226b3f7f1bf0506f3872808",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"dictName\":{\"type\":\"string\"},\"dictCode\":{\"type\":\"string\"},\"remark\":{\"type\":\"string\"},\"id\":{\"type\":\"string\"}},\"required\":[\"dictName\",\"dictCode\",\"id\"]}",
+        "req_body_type": "json",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"data\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"number\",\"mock\":{\"mock\":\"@id\"}},\"dictName\":{\"type\":\"string\",\"mock\":{\"mock\":\"@cword(3,6)\"}},\"dictCode\":{\"type\":\"string\",\"mock\":{\"mock\":\"@word\"}},\"remark\":{\"type\":\"string\",\"mock\":{\"mock\":\"@csentence\"}}},\"required\":[\"id\",\"dictName\",\"dictCode\"]}},\"required\":[\"data\"]}",
+        "uid": 125461,
+        "add_time": 1653872710,
+        "up_time": 1653872710,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/dict/item",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 2079739,
+        "method": "PUT",
+        "catid": 462749,
+        "title": "编辑字典项",
+        "path": "/dict/item",
+        "project_id": 154414,
+        "req_params": [],
+        "res_body_type": "json",
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "6226b472f1bf0506f387280c",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"dictCode\":{\"type\":\"string\"},\"value\":{\"type\":\"string\"},\"pid\":{\"type\":\"number\"},\"id\":{\"type\":\"string\"}},\"required\":[\"dictCode\",\"value\",\"id\"]}",
+        "req_body_type": "json",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"data\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"number\",\"mock\":{\"mock\":\"@id\"}},\"dictCode\":{\"type\":\"string\",\"mock\":{\"mock\":\"@word\"}},\"value\":{\"type\":\"string\",\"mock\":{\"mock\":\"@cword(2,6)\"}},\"pid\":{\"type\":\"number\",\"mock\":{\"mock\":\"@id\"}}},\"required\":[\"id\",\"dictCode\",\"value\"]}},\"required\":[\"data\"]}",
+        "uid": 125461,
+        "add_time": 1653872710,
+        "up_time": 1653872710,
+        "__v": 0
+      }
+    ]
+  },
+  {
+    "index": 0,
+    "name": "账号管理",
+    "desc": null,
+    "add_time": 1653872685,
+    "up_time": 1653872685,
+    "list": [
+      {
+        "query_path": {
+          "path": "/account/s",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 2079743,
+        "method": "GET",
+        "catid": 462751,
+        "title": "分页列表",
+        "path": "/account/s",
+        "project_id": 154414,
+        "req_params": [],
+        "res_body_type": "json",
+        "req_query": [
+          {
+            "required": "1",
+            "_id": "628364c0f1bf0506f38755e6",
+            "name": "p",
+            "example": "1",
+            "desc": ""
+          },
+          {
+            "required": "1",
+            "_id": "628364c0f1bf0506f38755e5",
+            "name": "pageSize",
+            "example": "10",
+            "desc": ""
+          }
+        ],
+        "req_headers": [],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"data\":{\"type\":\"object\",\"properties\":{\"list\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"string\",\"mock\":{\"mock\":\"@id\"}},\"name\":{\"type\":\"string\",\"mock\":{\"mock\":\"@cname\"},\"description\":\"用户名\"},\"orgId\":{\"type\":\"number\",\"mock\":{\"mock\":\"@integer(1,10)\"}},\"org\":{\"type\":\"object\",\"properties\":{\"name\":{\"type\":\"string\",\"mock\":{\"mock\":\"@cword(4)组织\"}}},\"required\":[\"name\"]},\"account\":{\"type\":\"string\",\"mock\":{\"mock\":\"@name\"},\"description\":\"账号\"},\"avatar\":{\"type\":\"number\",\"mock\":{\"mock\":\"@id\"}},\"roleId\":{\"type\":\"number\",\"mock\":{\"mock\":\"@integer(1,5)\"}},\"disabled\":{\"type\":\"boolean\",\"mock\":{\"mock\":\"@boolean\"}},\"mobile\":{\"type\":\"number\",\"mock\":{\"mock\":\"13@integer(8)\"},\"description\":\"联系电话\"},\"roleName\":{\"type\":\"string\",\"mock\":{\"mock\":\"@cword(2,4)角色\"}},\"avatarExt\":{\"type\":\"object\",\"properties\":{\"url\":{\"type\":\"string\",\"mock\":{\"mock\":\"@image\"}}},\"required\":[\"url\"]}},\"required\":[\"id\",\"name\",\"orgId\",\"account\",\"avatar\",\"roleId\",\"disabled\",\"mobile\",\"roleName\",\"avatarExt\",\"org\"]},\"uniqueItems\":true,\"minItems\":5,\"maxItems\":20},\"totalPage\":{\"type\":\"number\",\"mock\":{\"mock\":\"1\"}},\"totalCount\":{\"type\":\"number\",\"mock\":{\"mock\":\"@integer(5,20)\"}}},\"required\":[\"list\",\"totalPage\",\"totalCount\"]}},\"required\":[\"data\"]}",
+        "uid": 125461,
+        "add_time": 1653872711,
+        "up_time": 1653872711,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/account",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 2079757,
+        "method": "POST",
+        "catid": 462751,
+        "title": "创建",
+        "path": "/account",
+        "project_id": 154414,
+        "req_params": [],
+        "res_body_type": "json",
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "622b1c35f1bf0506f3872920",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"accountNumber\":{\"type\":\"string\"},\"accountName\":{\"type\":\"string\"},\"password\":{\"type\":\"string\"},\"avatar\":{\"type\":\"string\",\"mock\":{\"mock\":\"@image(200x200,@hex,fff,IMAGE)\"}},\"contactNumber\":{\"type\":\"string\"},\"state\":{\"type\":\"number\"},\"orgId\":{\"type\":\"number\"},\"roleId\":{\"type\":\"number\"}},\"required\":[\"state\",\"password\",\"accountNumber\",\"accountName\",\"orgId\"]}",
+        "req_body_type": "json",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"data\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"number\",\"mock\":{\"mock\":\"@id\"}},\"accountNumber\":{\"type\":\"string\",\"mock\":{\"mock\":\"@name\"}},\"accountName\":{\"type\":\"string\",\"mock\":{\"mock\":\"@cname\"}},\"avatar\":{\"type\":\"string\",\"mock\":{\"mock\":\"@image(200x200,@hex,fff,IMAGE)\"}},\"contactNumber\":{\"type\":\"number\",\"mock\":{\"mock\":\"13@integer(8)\"}},\"state\":{\"type\":\"boolean\",\"mock\":{\"mock\":\"@boolean\"}},\"createTime\":{\"type\":\"number\",\"mock\":{\"mock\":\"@timestamp\"}},\"orgId\":{\"type\":\"number\",\"mock\":{\"mock\":\"@id\"}},\"belongOrgName\":{\"type\":\"string\",\"mock\":{\"mock\":\"@cword(4)组织\"}},\"roleId\":{\"type\":\"number\",\"mock\":{\"mock\":\"@id\"}},\"sysRole\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"number\",\"mock\":{\"mock\":\"@id\"}},\"name\":{\"type\":\"string\",\"mock\":{\"mock\":\"@cword(2)角色\"}},\"remark\":{\"type\":\"null\"},\"type\":{\"type\":\"null\"},\"resources\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"string\",\"mock\":{\"mock\":\"@id\"}},\"name\":{\"type\":\"string\",\"mock\":{\"mock\":\"@cword(4)资源\"}},\"pid\":{\"type\":\"string\",\"mock\":{\"mock\":\"@id\"}}},\"required\":[\"id\",\"name\",\"pid\"]},\"uniqueItems\":true,\"minItems\":2,\"maxItems\":8}},\"required\":[\"id\",\"name\",\"remark\",\"type\",\"resources\"]},\"sysOrg\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"number\",\"mock\":{\"mock\":\"@id\"}},\"name\":{\"type\":\"string\",\"mock\":{\"mock\":\"@cword(4)组织\"}},\"fullName\":{\"type\":\"string\",\"mock\":{\"mock\":\"@cword(8)组织\"}},\"orgCode\":{\"type\":\"string\",\"mock\":{\"mock\":\"@integer(8)\"}},\"pid\":{\"type\":\"number\",\"mock\":{\"mock\":\"@id\"}},\"remark\":{\"type\":\"null\"},\"createTime\":{\"type\":\"number\",\"mock\":{\"mock\":\"@timestamp\"}}},\"required\":[\"id\",\"name\",\"fullName\",\"orgCode\",\"pid\",\"remark\",\"createTime\"]},\"orgName\":{\"type\":\"string\",\"mock\":{\"mock\":\"@cword(4)组织\"}}},\"required\":[\"id\",\"accountNumber\",\"accountName\",\"avatar\",\"contactNumber\",\"state\",\"createTime\",\"orgId\",\"belongOrgName\",\"roleId\",\"sysRole\",\"sysOrg\",\"orgName\"]}},\"required\":[\"data\"]}",
+        "uid": 125461,
+        "add_time": 1653872712,
+        "up_time": 1653872712,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/account",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 2079764,
+        "method": "DELETE",
+        "catid": 462751,
+        "title": "删除",
+        "path": "/account",
+        "project_id": 154414,
+        "req_params": [],
+        "res_body_type": "json",
+        "req_query": [
+          {
+            "required": "1",
+            "_id": "62257e6cf1bf0506f3872605",
+            "name": "id",
+            "desc": ""
+          }
+        ],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "62257e6cf1bf0506f3872606",
+            "name": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "req_body_type": "form",
+        "res_body": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{}}",
+        "uid": 125461,
+        "add_time": 1653872713,
+        "up_time": 1653872713,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/account",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 2079768,
+        "method": "PUT",
+        "catid": 462751,
+        "title": "编辑",
+        "path": "/account",
+        "project_id": 154414,
+        "req_params": [],
+        "res_body_type": "json",
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "6283662af1bf0506f38755e8",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"account\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"},\"avatar\":{\"type\":\"string\",\"mock\":{\"mock\":\"@image(200x200,@hex,fff,IMAGE)\"}},\"mobile\":{\"type\":\"string\"},\"state\":{\"type\":\"number\"},\"orgId\":{\"type\":\"number\"},\"roleId\":{\"type\":\"number\"},\"id\":{\"type\":\"string\",\"mock\":{\"mock\":\"@id\"}}},\"required\":[\"state\",\"account\",\"id\",\"name\",\"orgId\"]}",
+        "req_body_type": "json",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"data\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"number\",\"mock\":{\"mock\":\"@id\"}},\"accountNumber\":{\"type\":\"string\",\"mock\":{\"mock\":\"@name\"}},\"accountName\":{\"type\":\"string\",\"mock\":{\"mock\":\"@cname\"}},\"avatar\":{\"type\":\"string\",\"mock\":{\"mock\":\"@image(200x200,@hex,fff,IMAGE)\"}},\"contactNumber\":{\"type\":\"number\",\"mock\":{\"mock\":\"13@integer(8)\"}},\"state\":{\"type\":\"boolean\"},\"createTime\":{\"type\":\"number\",\"mock\":{\"mock\":\"@timestamp\"}},\"orgId\":{\"type\":\"number\",\"mock\":{\"mock\":\"@id\"}},\"belongOrgName\":{\"type\":\"string\",\"mock\":{\"mock\":\"@cword(4)组织\"}},\"roleId\":{\"type\":\"number\",\"mock\":{\"mock\":\"@id\"}},\"sysRole\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"number\",\"mock\":{\"mock\":\"@id\"}},\"name\":{\"type\":\"string\",\"mock\":{\"mock\":\"@cword(2)角色\"}},\"remark\":{\"type\":\"null\"},\"type\":{\"type\":\"null\"},\"resources\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"string\",\"mock\":{\"mock\":\"@id\"}},\"name\":{\"type\":\"string\",\"mock\":{\"mock\":\"@cword(4)资源\"}},\"pid\":{\"type\":\"string\",\"mock\":{\"mock\":\"@id\"}}},\"required\":[\"id\",\"name\",\"pid\"]},\"uniqueItems\":true,\"minItems\":2,\"maxItems\":8}},\"required\":[\"id\",\"name\",\"remark\",\"type\",\"resources\"]},\"sysOrg\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"number\",\"mock\":{\"mock\":\"@id\"}},\"name\":{\"type\":\"string\",\"mock\":{\"mock\":\"@cword(4)组织\"}},\"fullName\":{\"type\":\"string\",\"mock\":{\"mock\":\"@cword(8)组织\"}},\"orgCode\":{\"type\":\"string\",\"mock\":{\"mock\":\"@integer(8)\"}},\"pid\":{\"type\":\"number\",\"mock\":{\"mock\":\"@id\"}},\"remark\":{\"type\":\"null\"},\"createTime\":{\"type\":\"number\",\"mock\":{\"mock\":\"@timestamp\"}}},\"required\":[\"id\",\"name\",\"fullName\",\"orgCode\",\"pid\",\"remark\",\"createTime\"]},\"orgName\":{\"type\":\"string\",\"mock\":{\"mock\":\"@cword(4)组织\"}}},\"required\":[\"id\",\"accountNumber\",\"accountName\",\"avatar\",\"contactNumber\",\"state\",\"createTime\",\"orgId\",\"belongOrgName\",\"roleId\",\"sysRole\",\"sysOrg\",\"orgName\"]}},\"required\":[\"data\"]}",
+        "uid": 125461,
+        "add_time": 1653872714,
+        "up_time": 1653872714,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/account",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": false,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 2079750,
+        "method": "GET",
+        "catid": 462751,
+        "title": "详情",
+        "path": "/account",
+        "project_id": 154414,
+        "req_params": [],
+        "res_body_type": "json",
+        "req_query": [
+          {
+            "required": "1",
+            "_id": "628364d8f1bf0506f38755e7",
+            "name": "id",
+            "desc": ""
+          }
+        ],
+        "req_headers": [],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"disabled\":{\"type\":\"boolean\"},\"account\":{\"type\":\"string\"},\"name\":{\"type\":\"string\",\"mock\":{\"mock\":\"@name\"}},\"orgId\":{\"type\":\"number\",\"mock\":{\"mock\":\"@integer\"}},\"org\":{\"type\":\"object\",\"properties\":{\"name\":{\"type\":\"string\",\"mock\":{\"mock\":\"@cword(4)组织\"}}},\"required\":[\"name\"]},\"avatar\":{\"type\":\"number\",\"mock\":{\"mock\":\"@id\"}},\"mobile\":{\"type\":\"string\",\"mock\":{\"mock\":\"13@integer(8)\"}},\"roleId\":{\"type\":\"number\",\"mock\":{\"mock\":\"@integer\"}},\"address\":{\"type\":\"string\"},\"id\":{\"type\":\"string\",\"mock\":{\"mock\":\"@id\"}},\"avatarExt\":{\"type\":\"object\",\"properties\":{\"url\":{\"type\":\"string\",\"mock\":{\"mock\":\"@image\"}}},\"required\":[\"url\"]}},\"required\":[\"disabled\",\"account\",\"name\",\"orgId\",\"avatar\",\"mobile\",\"roleId\",\"address\",\"id\",\"avatarExt\",\"org\"]}",
+        "uid": 125461,
+        "add_time": 1653872712,
+        "up_time": 1653872712,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/account/reset",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 2079775,
+        "method": "PUT",
+        "catid": 462751,
+        "title": "重置密码",
+        "path": "/account/reset",
+        "project_id": 154414,
+        "req_params": [],
+        "res_body_type": "json",
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "6226d3eef1bf0506f3872825",
+            "name": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "req_body_type": "form",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"data\":{\"type\":\"object\",\"properties\":{\"password\":{\"type\":\"string\",\"mock\":{\"mock\":\"@string(5)@string('number',5)\"}}},\"required\":[\"password\"]}},\"required\":[\"data\"]}",
+        "uid": 125461,
+        "add_time": 1653872714,
+        "up_time": 1653872714,
+        "__v": 0
+      }
+    ]
+  },
+  {
+    "index": 0,
+    "name": "组织管理",
+    "desc": null,
+    "add_time": 1653872685,
+    "up_time": 1653872685,
+    "list": [
+      {
+        "query_path": {
+          "path": "/orgs",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": false,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 2079782,
+        "method": "GET",
+        "catid": 462753,
+        "title": "列表",
+        "path": "/orgs",
+        "project_id": 154414,
+        "req_params": [],
+        "res_body_type": "json",
+        "req_query": [
+          {
+            "required": "0",
+            "_id": "62419f8ef1bf0506f3872b2d",
+            "name": "pid",
+            "example": "1",
+            "desc": ""
+          }
+        ],
+        "req_headers": [],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "res_body": "{\n   \"data|2-6\": [\n      {\n         \"id\": \"@id\",\n         \"name\": \"@cword(4)组织\",\n         \"fullName\": \"@cword(8)组织\",\n         \"pid\": \"${query.pid}\",\n         \"createTime\": \"@integer(1648460000000,1700000000000)\",\n         \"hasChildren\": \"@boolean\"\n      }\n   ]\n}",
+        "uid": 125461,
+        "add_time": 1653872715,
+        "up_time": 1653872715,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/org",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": false,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 2079789,
+        "method": "POST",
+        "catid": 462753,
+        "title": "创建",
+        "path": "/org",
+        "project_id": 154414,
+        "req_params": [],
+        "res_body_type": "json",
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "62386cf0f1bf0506f387297f",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"name\":{\"type\":\"string\"},\"fullName\":{\"type\":\"string\"},\"pid\":{\"type\":\"string\"}},\"required\":[\"name\"]}",
+        "req_body_type": "json",
+        "res_body": "{\n   \"data\": {\n      \"id\": \"@id\",\n      \"name\": \"@cword(4)组织\",\n      \"fullName\": \"@cword(8)组织\",\n      \"pid\": \"${body.pid}\",\n      \"createTime\": \"@timestamp\"\n   }\n}",
+        "uid": 125461,
+        "add_time": 1653872716,
+        "up_time": 1653872716,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/org",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 2079796,
+        "method": "DELETE",
+        "catid": 462753,
+        "title": "删除",
+        "path": "/org",
+        "project_id": 154414,
+        "req_params": [],
+        "res_body_type": "json",
+        "req_query": [
+          {
+            "required": "1",
+            "_id": "62258122f1bf0506f387260e",
+            "name": "id",
+            "desc": ""
+          }
+        ],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "62258122f1bf0506f387260f",
+            "name": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "req_body_type": "form",
+        "res_body": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{}}",
+        "uid": 125461,
+        "add_time": 1653872716,
+        "up_time": 1653872716,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/org",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": false,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 2079800,
+        "method": "PUT",
+        "catid": 462753,
+        "title": "编辑",
+        "path": "/org",
+        "project_id": 154414,
+        "req_params": [],
+        "res_body_type": "json",
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "62386ce4f1bf0506f387297e",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"},\"fullName\":{\"type\":\"string\"},\"pid\":{\"type\":\"string\"}},\"required\":[\"id\",\"name\"]}",
+        "req_body_type": "json",
+        "res_body": "{\n   \"data\": {\n      \"id\": \"${body.id}\",\n      \"name\": \"${body.name}\",\n      \"fullName\": \"${body.fullName}\",\n      \"pid\": \"${body.pid}\",\n      \"createTime\": \"@timestamp\"\n   }\n}",
+        "uid": 125461,
+        "add_time": 1653872717,
+        "up_time": 1653872717,
+        "__v": 0
+      }
+    ]
+  },
+  {
+    "index": 0,
+    "name": "演示数据",
+    "desc": null,
+    "add_time": 1653872685,
+    "up_time": 1653872685,
+    "list": [
+      {
+        "query_path": {
+          "path": "/data/chart",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": false,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 2170309,
+        "method": "GET",
+        "catid": 462761,
+        "title": "可视化图表数据",
+        "path": "/data/chart",
+        "project_id": 154414,
+        "req_params": [],
+        "res_body_type": "json",
+        "desc": "",
+        "uid": 125461,
+        "add_time": 1656489736,
+        "up_time": 1656493402,
+        "req_query": [],
+        "req_headers": [],
+        "req_body_form": [],
+        "__v": 0,
+        "markdown": "",
+        "res_body": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"data\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"label\":{\"type\":\"array\",\"items\":{\"type\":\"string\",\"mock\":{\"mock\":\"@province\"}},\"uniqueItems\":true,\"minItems\":5,\"maxItems\":10},\"value\":{\"type\":\"array\",\"items\":{\"type\":\"number\",\"mock\":{\"mock\":\"@integer(0,1000)\"}},\"uniqueItems\":true,\"minItems\":15,\"maxItems\":15}},\"required\":[\"label\",\"value\"]},\"uniqueItems\":true,\"minItems\":2,\"maxItems\":2}},\"required\":[\"data\"]}"
+      },
+      {
+        "query_path": {
+          "path": "/file/images",
+          "params": []
+        },
+        "edit_uid": 125461,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 2079804,
+        "method": "GET",
+        "catid": 462761,
+        "title": "文档转图片",
+        "path": "/file/images",
+        "project_id": 154414,
+        "req_params": [],
+        "res_body_type": "json",
+        "req_query": [
+          {
+            "required": "1",
+            "_id": "624267e8f1bf0506f3872b34",
+            "name": "id",
+            "desc": ""
+          }
+        ],
+        "req_headers": [],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "res_body": "{\"type\":\"object\",\"properties\":{\"data\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"url\":{\"type\":\"string\",\"mock\":{\"mock\":\"@image(500x500,@hex,fff,@ctitle())\"}},\"name\":{\"type\":\"string\",\"mock\":{\"mock\":\"@word\"}}},\"required\":[\"url\",\"name\"]},\"uniqueItems\":true,\"minItems\":5,\"maxItems\":8}},\"required\":[\"data\"]}",
+        "uid": 125461,
+        "add_time": 1653872718,
+        "up_time": 1653872718,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/return/fail",
+          "params": []
+        },
+        "edit_uid": 125461,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 2079808,
+        "method": "GET",
+        "catid": 462761,
+        "title": "模拟业务失败",
+        "path": "/return/fail",
+        "project_id": 154414,
+        "req_params": [],
+        "res_body_type": "json",
+        "req_query": [],
+        "req_headers": [],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "res_body": "",
+        "uid": 125461,
+        "add_time": 1653872718,
+        "up_time": 1653872718,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/return/error",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 2079812,
+        "method": "GET",
+        "catid": 462761,
+        "title": "模拟接口异常",
+        "path": "/return/error",
+        "project_id": 154414,
+        "req_params": [],
+        "res_body_type": "json",
+        "req_query": [],
+        "req_headers": [],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "res_body": "",
+        "uid": 125461,
+        "add_time": 1653872719,
+        "up_time": 1653872719,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/Unauthorized",
+          "params": []
+        },
+        "edit_uid": 125461,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 2079819,
+        "method": "GET",
+        "catid": 462761,
+        "title": "模拟接口未授权",
+        "path": "/Unauthorized",
+        "project_id": 154414,
+        "req_params": [],
+        "res_body_type": "json",
+        "req_query": [],
+        "req_headers": [],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "res_body": "",
+        "uid": 125461,
+        "add_time": 1653872720,
+        "up_time": 1653872720,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/return/test",
+          "params": []
+        },
+        "edit_uid": 125461,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": false,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 2170354,
+        "method": "GET",
+        "catid": 462761,
+        "title": "测试数据",
+        "path": "/return/test",
+        "project_id": 154414,
+        "req_params": [],
+        "res_body_type": "json",
+        "desc": "",
+        "uid": 125461,
+        "add_time": 1656491896,
+        "up_time": 1656491915,
+        "req_query": [],
+        "req_headers": [],
+        "req_body_form": [],
+        "__v": 0,
+        "markdown": "",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"success\":{\"type\":\"boolean\"},\"status\":{\"type\":\"boolean\"},\"msg\":{\"type\":\"string\"},\"data\":{\"type\":\"string\"}},\"required\":[\"success\",\"status\",\"msg\",\"data\"]}"
+      }
+    ]
+  }
+]
