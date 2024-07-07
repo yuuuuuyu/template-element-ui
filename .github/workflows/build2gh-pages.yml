@@ -19,7 +19,7 @@ jobs:
           npm i
           npm run build
 
-      - name: Deploy to github-pages branch
+      - name: Deploy to gh-pages branch
         run: |
             cd dist  # 进入构建产物的目录 
             git init
@@ -27,4 +27,4 @@ jobs:
             git config --global user.email "zhiyong.yu@ytever.com"
             git add .
             git commit -m "Deploy build artifacts"
-            git push --force https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git master:github-pages
+            git push --force https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git master:gh-pages
