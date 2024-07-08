@@ -1,4 +1,4 @@
-name: CI
+name: CI/deploy2gh-page
 
 # Controls when the workflow will run
 on:
