@@ -1,0 +1,31 @@
+name: build2gh-pages
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+jobs:
+  build-and-deploy:
+    concurrency: ci-${{ github.ref }} # Recommended if you intend to make multiple deployments in quick succession.
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v3
+
+      - name: Install and Build 🔧 # This example project is built using npm and outputs the result to the 'build' folder. Replace with the commands required to build your project, or remove this step entirely if your site is pre-built.
+        run: |
+          npm i
+          npm run build
+
+      - name: Deploy to gh-pages branch
+        run: |
+            cd dist  # 进入构建产物的目录 
+            git init
+            git config --global user.name "于智勇"
+            git config --global user.email "zhiyong.yu@ytever.com"
+            git add .
+            git commit -m "Deploy build artifacts"
+            git push --force https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git master:github-pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
