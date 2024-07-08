@@ -1,7 +1,7 @@
 <template>
   <div class="flex-row align-center justify-center loginPage">
     <div>
-      <h1 class="main-title">平台名称文字占位符后台管理系统</h1>
+      <h1 class="main-title">[平台名称]后台管理系统</h1>
 
       <el-form
         ref="validForm"
