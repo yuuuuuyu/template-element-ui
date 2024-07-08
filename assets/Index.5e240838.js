@@ -1,0 +1,1 @@
+import{n as t}from"./index.c811c3b7.js";import"./ui.1d6f8af4.js";const s=t({data:()=>({}),methods:{},created:function(){}},(function(){return(0,this._self._c)("router-view",{staticClass:"scrollbar"})}),[],!1,null,"290a22b5",null,null).exports;export{s as default};
