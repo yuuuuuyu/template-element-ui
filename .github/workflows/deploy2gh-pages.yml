@@ -41,3 +41,8 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist  # Vue 项目的构建输出目录
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4.2.5
+        with:
+            branch: gh-pages # The branch the action should deploy to.
+            folder: / # The folder the action should deploy.

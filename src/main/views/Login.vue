@@ -16,13 +16,13 @@
         <el-form-item prop="account">
           <el-input
             :autofocus="true"
-            placeholder="输入用户名"
+            placeholder="请输入用户名"
             v-model="formData.account"
           ></el-input>
         </el-form-item>
         <el-form-item prop="password">
           <el-input
-            placeholder="输入密码"
+            placeholder="请输入密码"
             type="password"
             v-model="formData.password"
             show-password
