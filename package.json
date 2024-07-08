@@ -6,7 +6,7 @@
         "build": "vite build",
         "preview": "vite preview --host"
     },
-    "homepage": "https://cutting-mat.github.io/template-element-ui/",
+    "homepage": "https://yuuuuuyu.github.io/template-element-ui/",
     "dependencies": {
         "@cutting-mat/axios": "^1.2.0",
         "crypto-js": "^3.3.0",
