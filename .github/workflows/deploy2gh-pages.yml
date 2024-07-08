@@ -8,9 +8,6 @@ on:
   pull_request:
     branches: [ "master" ]
 
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
-
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build-and-deploy"
@@ -21,7 +18,8 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
       # Sets up Node.js
       - name: Set up Node.js
@@ -31,11 +29,11 @@ jobs:
 
       # Installs dependencies
       - name: Install dependencies
-        run: npm install
+        run: pnpm install
 
       # Builds the Vue project
       - name: Build project
-        run: npm run build
+        run: pnpm build
 
       # Deploys to GitHub Pages
       - name: Deploy to GitHub Pages
