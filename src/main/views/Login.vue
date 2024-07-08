@@ -54,17 +54,7 @@
           </el-link>
         </div>
       </el-form>
-      <div class="footer-info">
-        @2022 版权所有 占位文字
-        <span class="_s">|</span>
-        Github：
-        <el-link
-          type="primary"
-          href="https://github.com/cutting-mat"
-          target="_blank"
-          >cutting-mat</el-link
-        >
-      </div>
+      <div class="footer-info">@2022 版权所有 占位文字</div>
     </div>
     <!-- 验证身份 -->
     <auth ref="auth" :types="['email', 'mobile']" command="reset" />
@@ -72,30 +62,30 @@
 </template>
 
 <script>
-import { event } from "@/core";
-import { login } from "@/main/api/common";
-import { SetAccountToken } from "@/plugin.permission.config";
+import { event } from "@/core"
+import { login } from "@/main/api/common"
+import { SetAccountToken } from "@/plugin.permission.config"
 
 export default {
   data() {
     const validImage = () => {
       return new Promise((resolve, reject) => {
         if (this.formData.captcha) {
-          resolve();
+          resolve()
         } else {
           this.$refs.InputCaptchaImage.valid()
-            .then((captcha) => {
-              console.log("then", captcha);
-              this.formData.captcha = captcha;
-              resolve();
+            .then(captcha => {
+              console.log("then", captcha)
+              this.formData.captcha = captcha
+              resolve()
             })
-            .catch((msg) => {
-              console.log("catch", msg);
-              reject(msg);
-            });
+            .catch(msg => {
+              console.log("catch", msg)
+              reject(msg)
+            })
         }
-      });
-    };
+      })
+    }
 
     return {
       loading: false,
@@ -125,55 +115,55 @@ export default {
         ],
         captcha: [{ validator: validImage, trigger: [] }],
       },
-    };
+    }
   },
   methods: {
     login() {
       if (this.loading) {
-        return null;
+        return null
       }
-      this.loading = true;
-      this.$refs.validForm.validate((valid) => {
+      this.loading = true
+      this.$refs.validForm.validate(valid => {
         if (valid) {
           login(this.formData)
-            .then((res) => {
+            .then(res => {
               if (res.status === 200) {
-                this.loading = false;
+                this.loading = false
                 // 存储token
-                SetAccountToken(res.data);
+                SetAccountToken(res.data)
                 // 登录后全局发布 login 事件, 将被 权限模块 接收
                 event.emit("login", () => {
                   this.$router.replace({
                     path: this.$router.currentRoute.query.redirect || "/",
-                  });
-                });
+                  })
+                })
               } else {
                 this.$message({
                   message: "登陆失败",
                   type: "warning",
-                });
+                })
               }
             })
             .catch(() => {
-              this.loading = false;
-            });
+              this.loading = false
+            })
         } else {
-          this.loading = false;
+          this.loading = false
         }
-      });
+      })
     },
     handleChangePw() {
-      this.$refs.auth.auth().then((authCode) => {
+      this.$refs.auth.auth().then(authCode => {
         this.$router.push({
           name: "修改密码",
           query: {
             authCode,
           },
-        });
-      });
+        })
+      })
     },
   },
-};
+}
 </script>
 
 <style scoped>
@@ -233,3 +223,4 @@ export default {
   margin: 0 0.5em;
 }
 </style>
+
