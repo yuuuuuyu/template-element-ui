@@ -29,11 +29,11 @@ jobs:
 
       # Installs dependencies
       - name: Install dependencies
-        run: pnpm install
+        run: npm install
 
       # Builds the Vue project
       - name: Build project
-        run: pnpm build
+        run: npm run build
 
       # Deploys to GitHub Pages
       - name: Deploy to GitHub Pages
